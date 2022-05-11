@@ -1,0 +1,115 @@
+/* -----------------------
+ Reset link ref : https://piccalil.li/blog/a-modern-css-reset
+----------------------- */
+
+
+/* Box Sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Reset Margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+
+/* Set up the body */
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+
+/* Make images eazier */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Make form elements easier */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* Remove animations for people who'ev turned them off */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* -----------------------
+ Utility Classes
+----------------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 60rem;
+}
+
+
+/* sr = screen reader */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.box {
+  background-color: lightblue;
+  padding: 3rem;
+}
+
+.cta {
+  background-color: pink;
+  padding: 2rem;
+  border-radius: 1rem;
+}
