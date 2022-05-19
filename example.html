@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example use HTML & CSS</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+  }
+  
+  img {
+    width: 180px;
+    aspect-ratio: 1;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  h2 {
+    color: #295c9e;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+  }
+  
+  h3 {
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  .container {
+    display: grid;
+    place-items: center;
+  }
+  
+  .job {
+    margin-top: 0.5rem;
+    width: 60%;
+    text-align: center;
+  }
+  
+  .desc {
+    margin-top: 1rem;
+    font-size: 14px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <img src="profile.jpg" alt="Profile" />
+    <div class="job">
+      <h2>Syafira Ashifa</h2>
+      <h3>Software Engineer</h3>
+      <p class="desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, voluptatum?
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

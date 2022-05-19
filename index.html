@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="index.css" />
 
-  <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="index.css" />
+    <!-- Our Javascript -->
+    <script src="index.js" defer></script>
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
 
-  <!-- Our Javascript -->
-  <script src="index.js" defer></script>
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-
-<body class="home">
-  <!-- Navbar -->
-  <header class="primary-header flex">
-    <div>
-      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo" />
-    </div>
-    <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+  <body class="home">
+    <!-- Navbar -->
+    <header class="primary-header flex">
+      <div>
+        <img
+          src="./assets/shared/logo.svg"
+          alt="space tourism logo"
+          class="logo"
+        />
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
         <span class="sr-only" aria-expanded="false">Menu</span>
       </button>
-    <nav>
-      <ul id="primary-navigation" class="primary-navigation flex underline-indicators">
-        <li class="active">
-          <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span>00</span> Home</a
+      <nav>
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation flex underline-indicators"
+        >
+          <li class="active">
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="index.html"
+              ><span>00</span> Home</a
             >
           </li>
           <li>
