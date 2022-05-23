@@ -63,40 +63,65 @@
       </nav>
     </header>
 
-    <main id="main" class="grid-container grid-container--destination">
+    <main id="main" class="grid-container grid-container--destination flow">
       <h1 class="numbered-title">
         <span aria-hidden="true">01</span> Pick your destination
       </h1>
 
-      <img src="assets/destination/image-moon.png" alt="the moon" />
+      <picture>
+        <source srcset="assets/destination/image-moon.webp" type="image/webp" />
+        <img src="assets/destination/image-moon.png" alt="the moon" />
+      </picture>
+      <picture hidden>
+        <source srcset="assets/destination/image-mars.webp" type="image/webp" />
+        <img src="assets/destination/image-mars.png" alt="the planet mars" />
+      </picture>
+      <picture hidden>
+        <source
+          srcset="assets/destination/image-europa.webp"
+          type="image/webp"
+        />
+        <img
+          src="assets/destination/image-europa.png"
+          alt="the planet europa"
+        />
+      </picture>
+      <picture hidden>
+        <source
+          srcset="assets/destination/image-titan.webp"
+          type="image/webp"
+        />
+        <img src="assets/destination/image-titan.png" alt="the moon titan" />
+      </picture>
+
       <div class="tab-list underline-indicators flex">
         <button
           aria-selected="true"
-          class="uppercase ff-sans cond text-accent bg-dark letter-spacing-2"
+          class="uppercase ff-sans cond text-accent letter-spacing-2"
         >
           Moon
         </button>
         <button
           aria-selected="false"
-          class="uppercase ff-sans cond text-accent bg-dark letter-spacing-2"
+          class="uppercase ff-sans cond text-accent letter-spacing-2"
         >
           Mars
         </button>
         <button
           aria-selected="false"
-          class="uppercase ff-sans cond text-accent bg-dark letter-spacing-2"
+          class="uppercase ff-sans cond text-accent letter-spacing-2"
         >
           Europa
         </button>
         <button
           aria-selected="false"
-          class="uppercase ff-sans cond text-accent bg-dark letter-spacing-2"
+          class="uppercase ff-sans cond text-accent letter-spacing-2"
         >
           Titan
         </button>
       </div>
 
-      <article class="destination-info">
+      <article class="destination-info flow">
         <h2 class="fs-800 uppercase ff-serif">Moon</h2>
 
         <p>
