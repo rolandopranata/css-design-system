@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <!-- Normalize for render css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,13 +21,15 @@
 
   <!-- Our Javascript -->
   <script src="index.js" defer></script>
+  <script src="tabs.js" defer></script>
+
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 
 <body class="destination">
   <a class="skip-to-content" href="#main">Skip to content</a>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <header class="primary-header flex">
     <div>
       <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo" />
@@ -63,19 +68,25 @@
       </nav>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main id="main" class="grid-container grid-container--destination flow">
       <h1 class="numbered-title">
         <span aria-hidden="true">01</span> Pick your destination
       </h1>
 
+      <!-- Moon Image -->
       <picture>
         <source srcset="assets/destination/image-moon.webp" type="image/webp" />
         <img src="assets/destination/image-moon.png" alt="the moon" />
       </picture>
+
+      <!-- Mars Image -->
       <picture hidden>
         <source srcset="assets/destination/image-mars.webp" type="image/webp" />
         <img src="assets/destination/image-mars.png" alt="the planet mars" />
       </picture>
+
+      <!-- Europa Image -->
       <picture hidden>
         <source
           srcset="assets/destination/image-europa.webp"
@@ -86,6 +97,8 @@
           alt="the planet europa"
         />
       </picture>
+
+      <!-- Titan Image -->
       <picture hidden>
         <source
           srcset="assets/destination/image-titan.webp"
@@ -94,34 +107,61 @@
         <img src="assets/destination/image-titan.png" alt="the moon titan" />
       </picture>
 
-      <div class="tab-list underline-indicators flex">
+      <!-- Tab List -->
+      <div
+        class="tab-list underline-indicators flex"
+        role="tablist"
+        aria-label="destination list"
+      >
         <button
+          role="tab"
+          aria-controls="moon-tab"
           aria-selected="true"
           class="uppercase ff-sans cond text-accent letter-spacing-2"
+          tabindex="0"
+          data-image="moon-image"
         >
           Moon
         </button>
         <button
+          role="tab"
+          aria-controls="mars-tab"
           aria-selected="false"
           class="uppercase ff-sans cond text-accent letter-spacing-2"
+          tabindex="-1"
+          data-image="mars-image"
         >
           Mars
         </button>
         <button
+          role="tab"
+          aria-controls="europa-tab"
           aria-selected="false"
           class="uppercase ff-sans cond text-accent letter-spacing-2"
+          tabindex="-1"
+          data-image="europa-image"
         >
           Europa
         </button>
         <button
+          role="tab"
+          aria-controls="titan-tab"
           aria-selected="false"
           class="uppercase ff-sans cond text-accent letter-spacing-2"
+          tabindex="-1"
+          data-image="titan-image"
         >
           Titan
         </button>
       </div>
 
-      <article class="destination-info flow">
+      <!-- Moon  -->
+      <article
+        class="destination-info flow"
+        id="moon-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2 class="fs-800 uppercase ff-serif">Moon</h2>
 
         <p>
@@ -140,6 +180,94 @@
           <div>
             <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
             <p class="ff-serif uppercase">3 days</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mars  -->
+      <article
+        hidden
+        class="destination-info flow"
+        id="mars-tab"
+        tabindex="-1"
+        role="tabpanel"
+      >
+        <h2 class="fs-800 uppercase ff-serif">Mars</h2>
+
+        <p>
+          Don’t forget to pack your hiking boots. You’ll need them to tackle
+          Olympus Mons, the tallest planetary mountain in our solar system. It’s
+          two and a half times the size of Everest!
+        </p>
+
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+            <p class="ff-serif uppercase">225 mil. km</p>
+          </div>
+
+          <div>
+            <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+            <p class="ff-serif uppercase">9 months</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Europa  -->
+      <article
+        hidden
+        class="destination-info flow"
+        id="europa-tab"
+        tabindex="-1"
+        role="tabpanel"
+      >
+        <h2 class="fs-800 uppercase ff-serif">Europa</h2>
+
+        <p>
+          The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+          winter lover’s dream. With an icy surface, it’s perfect for a bit of
+          ice skating, curling, hockey, or simple relaxation in your snug
+          wintery cabin.
+        </p>
+
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+            <p class="ff-serif uppercase">628 mil. km</p>
+          </div>
+
+          <div>
+            <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+            <p class="ff-serif uppercase">3 years</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Titan  -->
+      <article
+        hidden
+        class="destination-info flow"
+        id="titan-tab"
+        tabindex="-1"
+        role="tabpanel"
+      >
+        <h2 class="fs-800 uppercase ff-serif">Titan</h2>
+
+        <p>
+          The only moon known to have a dense atmosphere other than Earth, Titan
+          is a home away from home (just a few hundred degrees colder!). As a
+          bonus, you get striking views of the Rings of Saturn.
+        </p>
+
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+            <p class="ff-serif uppercase">1.6 bil. km</p>
+          </div>
+
+          <div>
+            <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+            <p class="ff-serif uppercase">7 years</p>
           </div>
         </div>
       </article>
